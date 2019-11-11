@@ -59,7 +59,22 @@ function total() {
   return(total)   
 }
 
+function removeFromCart(remove_item) {
+  // write your code here
+  var productItem = {}
+  for (var i = 0; i < cart.length; i++) {
+    productItem = cart[i].itemName
+    if (productItem === remove_item) {
+      var removed = cart.splice(i, 1) 
+    } 
+  }
 
+  if (productItem != remove_item) {
+    return('That item is not in your cart.')
+  } else {
+    return(cart)
+  }
+}
 
 function placeOrder(cardNumber) {
   // write your code here
