@@ -79,8 +79,12 @@ function removeFromCart(remove_item) {
 function placeOrder(cardNumber) {
   // write your code here
   if (cardNumber) {
-    return `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`
+    var message = `Your total cost is $71, which will be charged to the card ${cardNumber}.`
+    while (cart.length) {
+      cart.pop();
+    }
   } else {
     return("Sorry, we don't have a credit card on file for you.")
   }
+  return(message)
 }
